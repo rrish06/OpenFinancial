@@ -1,0 +1,185 @@
+<header id="header" class="header fixed-top">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+    <a href="#" class="logo d-flex align-items-center">
+      <img src="assets/images/logo.png" alt="">
+    </a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="#">Product</a></li>
+        <li><a class="nav-link scrollto" href="#">Solution</a></li>
+        <li><a class="nav-link scrollto" href="#">Pricing</a></li>
+        <li><button class="btn-custom">Login</button></li>
+        <li style="padding-left: 80px;"><button class="btn-custom" style="background: #874eb5;color: #FFFFFF;">Get
+            Started</button></li>
+      </ul>
+    </nav><!-- .navbar -->
+
+  </div>
+</header>
+<section style="height: 100%;">
+  <div class="container-fluid" style="height: 100%;overflow: hidden;">
+    <div class="row col-md-12" style="height: 100%;">
+      <div class="col-md-6">
+        <div class="backimg2"></div>
+        <div style="width: 55%;margin-top: -73vh;margin-left: 50px;">
+          <div style="padding-bottom: 90px">
+            <img src="assets/images/super-slim.svg" alt="">
+            <hr class="horizontal">
+          </div>
+          <img src="assets/images/collect_img-video.png" alt="" style="width: 27vw;">
+        </div>
+        <div class="backimg3" style="margin-left: 13vw;margin-top: -4vh;"></div>
+      </div>
+
+      <div class="col-md-6 ">
+        <div class="col-md-12">
+          <div class="backimg1"></div>
+        </div>
+        <div class="card col-md-6" style="margin-top: -58vh;border-radius: 20px;margin-left: 10vw;">
+          <div class="card-header">
+            <div class="row col-md-12" style="text-align: center;display: block;">
+              <h3 class="card-title ct">Eligibility Calculator</h3>
+            </div>
+          </div>
+          <div class="card-body">
+
+            <div class="slidecontainer">
+              <div>
+                <span>Monthly Income</span>
+                <br>
+                <h2>{{monthlyIncome | currency: 'INR'}}</h2>
+              </div>
+              <input type="range" min="0" max="1000000" value="150000" #ranger (input)="monthlyInc(ranger.value)"
+                class="slid">
+            </div>
+            <div class="slidecontainer">
+              <div>
+                <span>Monthly Expense</span>
+                <br>
+                <h2>{{monthlyExpense | currency: 'INR'}}</h2>
+              </div>
+              <input type="range" min="0" max="1000000" value="50000" #rangerexp (input)="monthlyExp(rangerexp.value)"
+                class="slid">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Repayment Tenure</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>6 Month</option>
+                <option>12 Month</option>
+                <option>18 Month</option>
+                <option>24 Month</option>
+              </select>
+            </div>
+            <div class="form-group">
+              Do you have any existing loan?
+              <label class="switch" style="float: right;">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div>
+              <span>EMI of Existing load(optional)</span>
+            </div>
+            <br>
+            <input type="text" style="width: 100%;" [ngModel]="emi | currency: 'INR'">
+          </div>
+        </div>
+        <div class="col-md-2" style="margin-top: -42vh;margin-left: 33vw;">
+          <div class="card" style="background-color: #663399;height: 30vh;">
+            <div class="card-body align-body">
+              <span>Loan Amount</span>
+              <h3>{{150000 | currency: 'INR'}}</h3>
+              <span>Your EMI will be</span>
+              <h3>{{15000 | currency: 'INR'}}</h3>
+              <button class="btn-money">Get Money</button>
+            </div>
+          </div>
+        </div>
+        <div class="backimg3 col-md-6"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section style="height: 100%;">
+  <div class="container-fluid" style="height: 100%;overflow: hidden;padding-right: 0 !important;">
+    <div class="row col-md-12 img" style="height: 100%;margin-right: 0 !important;">
+      <div class="col-md-3">
+
+        <div class="card" style="margin-left: 135px;border-radius: 10px;margin-top: 80px;">
+          <img class="card-img-top" src="assets/images/instantly.png" alt="Card image cap"
+            style="width: 25%;margin: 20px;">
+          <div class="card-body">
+            <b>Quick cash disbursement</b>
+            <p class="card-text" style="margin-top: 10px;">Get terms loans that your business needs within 72 hrs
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-left: 135px;border-radius: 10px;margin-top: 50px;">
+          <img class="card-img-top" src="assets/images/interest-rate.png" alt="Card image cap"
+            style="width: 25%;margin: 20px;">
+          <div class="card-body">
+            <b>Low-interest rate</b>
+            <p class="card-text" style="margin-top: 10px;">Achieve your financial goals with an amazing interest rate
+              starting at 13% per annum
+            </p>
+          </div>
+        </div>
+
+
+        <div class="card" style="margin-left: 135px;border-radius: 10px;margin-top: 50px;">
+          <img class="card-img-top" src="assets/images/payments.png" alt="Card image cap"
+            style="width: 25%;margin: 20px;">
+          <div class="card-body">
+            <b>Zero Paperwork</b>
+            <p class="card-text" style="margin-top: 10px;">Get started instantly by submitting only your basic details &
+              bank statements
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+
+        <div class="card" style="margin-top: 23vh;width: 21em;border-radius: 10px;background: #C1A4D8;color: white;">
+          <img class="card-img-top" src="assets/images/freelancer_feature_icon_6@1.5x.png" alt="Card image cap"
+            style="width: 25%;margin: 20px;">
+          <div class="card-body">
+            <b>Ace your business finances</b>
+            <p class="card-text" style="margin-top: 10px;">Manage banking, accounting & everything in between, on one
+              platform
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="width: 21em;border-radius: 10px;;margin-top: 80px;">
+          <img class="card-img-top" src="assets/images/Covid.png" alt="Card image cap" style="width: 25%;margin: 20px;">
+          <div class="card-body">
+            <b>Loans to fight COVID-19</b>
+            <p class="card-text" style="margin-top: 10px;">Zero EMI for first 3 months on Back-to-Business loans of upto
+              1 lakh
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        <img src="assets/images/business.svg" alt="" style="margin-top: 30vh;">
+        <hr class="horizontal">
+        <br>
+        <div style="margin-top: 4vh;margin-right: 13vh;color: #A4A5AA;">
+          <p>Get your hands on a term loan that’s crafted for your business</p>
+        </div>
+        <div>
+          <button class="btn-account">Get an Open Account</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
